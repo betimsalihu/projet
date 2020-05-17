@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ path('home') }}">
+        <img src="https://lh3.googleusercontent.com/proxy/nDhVEYv0SlqGKIOcpNn_ZNYoTCIAJ-pbHTmHYZbiRU_kmx8TvZ7uj0mARpZPN7-xgl2M0A2omZuJhoKI-C7MIF0W2GnDR1Ly5BfJA_9Xv2TfZne_jCE4kw" width="50px"  alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <input type="text" placeholder="Rechercher" class="form-control">
+            <input type="button" value="Trouver un marché" class="btn btn-info mx-2" >
+            <input type="button" value="Rejoindre la communauté" class="btn btn-warning">
+
+
+            <a class="nav-item nav-link {{  app.request.pathInfo == '/' ? 'active' : '' }}" href="{{ path('home') }}">Home</a>
+            <a class="nav-item nav-link {{  app.request.pathInfo == '/register' ? 'active' : '' }}" href="{{ path('register') }}">Register</a>
+            <input type="button" value="Se Connecter" class="btn btn-danger">
+
+
+        </div>
+    </div>
+</nav>
